@@ -6,47 +6,47 @@ inquirer
         {
             type: "input",
             name: "title",
-            message:
+            message: "What is the title of your project?"
         },
         {
             type: "input",
             name: "description",
-            message:
+            message: "Please enter a description for your project."
         },
         {
             type: "input",
             name: "installation",
-            message:
+            message: "Please enter installation instructions for your application. (NOTE: If there are no instructions, enter 'None'."
         },
         {
             type: "input",
             name: "usage",
-            message:
+            message: "How is your application used?"
         },
         {
             type: "input",
             name: "contributing",
-            message:
+            message: "How can someone else contribute to your project?"
         },
         {
             type: "input",
             name: "tests",
-            message:
+            message: "What are the test instructions for your application?"
         },
         {
-            type: "list"
+            type: "list",
             name: "license",
-            message:
+            message: "Please select which license you used for your application"
         },
         {
             type: "input",
             name: "github",
-            message:
+            message: "Please enter your GitHub username."
         },
         {
             type: "input",
             name: "email",
-            message:
+            message: "Please enter your email address."
         },
     ])
     .then()
