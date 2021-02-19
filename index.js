@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
+const generateMarkdown = require("./utils/generateMarkdown");
 
 inquirer
     .prompt([
@@ -36,7 +37,8 @@ inquirer
         {
             type: "list",
             name: "license",
-            message: "Please select which license you used for your application"
+            message: "Please select which license you used for your application",
+            choices: ["APACHE", "MIT", "GPL", "BSD", "None"]
         },
         {
             type: "input",
@@ -49,4 +51,11 @@ inquirer
             message: "Please enter your email address."
         },
     ])
-    .then()
+    .then((data) => {
+        const filename = `README.md`
+        
+
+        fs.writeFile(filename, generateMarkdown(data), (err) =>
+        err ? console.log(err) : console.log('Success!')
+    );
+    })
